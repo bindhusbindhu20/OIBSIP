@@ -1,0 +1,344 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #243447;
+    line-height: 1.7;
+    background: #f8f5ef;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #f6c453;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 21px;
+    max-width: 700px;
+    margin: auto;
+    color: #e8eef2;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 30px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    height: 480px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.section-label {
+    color: #c58b24;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.about h2,
+.timeline-section h2,
+.legacy h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #172b3a;
+    margin-bottom: 25px;
+}
+
+.about-content p:not(.section-label) {
+    margin-bottom: 18px;
+    color: #52616b;
+}
+
+
+/* =========================
+   TIMELINE SECTION
+========================= */
+
+.timeline-section {
+    padding: 90px 30px;
+    background: #e8f1f5;
+    text-align: center;
+}
+
+.timeline-section > h2 {
+    margin-bottom: 50px;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    text-align: left;
+}
+
+.timeline-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+
+    border-left: 5px solid #c58b24;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-6px);
+}
+
+.timeline-card span {
+    display: inline-block;
+    color: #c58b24;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+    font-family: Georgia, serif;
+    color: #203a43;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    color: #61717c;
+}
+
+
+/* =========================
+   QUOTE SECTION
+========================= */
+
+.quote-section {
+    padding: 90px 30px;
+
+    background: #203a43;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box {
+    max-width: 850px;
+    text-align: center;
+    color: white;
+}
+
+.quote-mark {
+    font-family: Georgia, serif;
+    font-size: 80px;
+    height: 60px;
+    color: #f6c453;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+.quote-author {
+    color: #f6c453;
+    font-weight: bold;
+}
+
+
+/* =========================
+   LEGACY SECTION
+========================= */
+
+.legacy {
+    padding: 90px 30px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.legacy p:last-child {
+    color: #52616b;
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+footer p:last-child {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 25px;
+    }
+
+    .image-container img {
+        height: 400px;
+    }
+
+    .about h2,
+    .timeline-section h2,
+    .legacy h2 {
+        font-size: 32px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    blockquote {
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .about,
+    .timeline-section,
+    .legacy {
+        padding: 50px 20px;
+    }
+
+    .image-container img {
+        height: 350px;
+    }
+
+    .about h2,
+    .timeline-section h2,
+    .legacy h2 {
+        font-size: 28px;
+    }
+
+    blockquote {
+        font-size: 20px;
+    }
+}
